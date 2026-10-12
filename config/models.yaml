@@ -1,0 +1,61 @@
+# model_freshness:
+#   verified_at: 2026-02-17
+#   sources:
+#     - https://platform.openai.com/docs/models
+#     - https://platform.openai.com/docs/guides/latest-model
+#     - https://docs.anthropic.com/en/docs/about-claude/models/all-models
+#     - https://ai.google.dev/models/gemini
+# strategy: latest-alias-first with optional pinned fallback
+# optional pinned fallback shape:
+# - id: gpt-5.2
+#   pinned: false
+#   fallback_pinned_id: gpt-5.2-YYYYMMDD
+
+providers:
+  openai:
+    env_key: OPENAI_API_KEY
+    models:
+      - id: gpt-5.2
+        name: GPT-5.2
+        pinned: false
+        default_params: {temperature: 0.7, max_tokens: 4096}
+      - id: gpt-5.2-pro
+        name: GPT-5.2 Pro
+        pinned: false
+        default_params: {temperature: 0.7, max_tokens: 4096}
+      - id: gpt-5-mini
+        name: GPT-5 Mini
+        pinned: false
+        default_params: {temperature: 0.7, max_tokens: 4096}
+      - id: gpt-5-nano
+        name: GPT-5 Nano
+        pinned: false
+        default_params: {temperature: 0.7, max_tokens: 4096}
+
+  anthropic:
+    env_key: ANTHROPIC_API_KEY
+    models:
+      - id: claude-opus-4-6
+        name: Claude Opus 4.6
+        pinned: false
+        default_params: {temperature: 0.7, max_tokens: 4096}
+      - id: claude-sonnet-4-5
+        name: Claude Sonnet 4.5
+        pinned: false
+        default_params: {temperature: 0.7, max_tokens: 4096}
+      - id: claude-haiku-4-5
+        name: Claude Haiku 4.5
+        pinned: false
+        default_params: {temperature: 0.7, max_tokens: 4096}
+
+  google:
+    env_key: GOOGLE_API_KEY
+    models:
+      - id: gemini-3-pro-preview
+        name: Gemini 3 Pro Preview
+        pinned: false
+        default_params: {temperature: 0.7, max_tokens: 4096}
+      - id: gemini-3-flash-preview
+        name: Gemini 3 Flash Preview
+        pinned: false
+        default_params: {temperature: 0.7, max_tokens: 4096}

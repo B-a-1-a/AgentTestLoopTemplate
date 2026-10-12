@@ -1,0 +1,15 @@
+max_iterations: 6
+sandbox_timeout_seconds: 30
+workspace_root: workspace
+callback_server:
+  host: 127.0.0.1
+  port: 8765
+sandbox:
+  image: agent-loop-sandbox:latest
+  memory: 256m
+  cpus: 0.5
+  pids_limit: 64
+  network: sandbox-net
+agent:
+  parser_mode: json
+  enforce_json_tool_calls: true

@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+.pytest_cache/
+.mypy_cache/
+
+# Virtualenvs
+.venv/
+venv/
+env/
+
+# Environment
+.env
+
+# OS / editors
+.DS_Store
+.vscode/
+.idea/
+
+# Local runtime artifacts
+.tmp/
+.logs/
+
+# Workspace artifacts (keep folder)
+workspace/*
+!workspace/.gitkeep
